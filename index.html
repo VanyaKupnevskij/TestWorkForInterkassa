@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form
+      name="payment"
+      method="post"
+      action="https://sci.interkassa.com/"
+      accept-charset="UTF-8"
+      id="send-form"
+    >
+      <input readonly name="ik_co_id" value="629730911e9359307f2cb8ff" />
+      <input readonly name="ik_pm_no" value="546489356367" />
+      <input readonly name="ik_am" value="1.95" />
+      <input readonly name="ik_cur" value="UAH" />
+      <input readonly name="ik_desc" value="test" />
+      <input readonly name="ik_sign" value="" id="ik_sign-input" />
+
+      <input readonly type="hidden" name="ik_payment_method" value="test" />
+      <input readonly type="hidden" name="ik_payment_currency" value="XTS" />
+
+      <div class="controls">
+        <button class="button-submit" id="button-sign-id">Get sign</button>
+        <button class="button-submit" id="button-submit-id">Pay</button>
+      </div>
+    </form>
+
+    <script src="main.js"></script>
+  </body>
+</html>
